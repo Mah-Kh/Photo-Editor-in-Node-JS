@@ -1,0 +1,31 @@
+{
+  "name": "editor",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "develop-docker": "npm install && npm run develop",
+    "develop": "nodemon --inspect=0.0.0.0:9229 index.js",
+    "start": "node index.js",
+    "scss": "node-sass -w static/scss/ -o static/css/"
+  },
+  "author": "Tony Wooster <tony.wooster@contentful.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-winston": "^3.0.1",
+    "jade": "^1.11.0",
+    "node-sass": "^6.0.1",
+    "sharp": "^0.23.0",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "@types/jest": "^24.0.18",
+    "@types/sharp": "^0.21.2",
+    "@types/winston": "^2.4.4",
+    "jest": "^24.9.0",
+    "nodemon": "^1.18.8"
+  }
+}
