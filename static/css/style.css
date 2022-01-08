@@ -1,0 +1,86 @@
+body {
+  max-width: 1320px;
+  margin: 30px auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal; }
+
+input {
+  font-family: "Roboto", sans-serif; }
+
+h1 {
+  font-size: 20px; }
+
+h2 {
+  font-size: 20px;
+  text-align: center; }
+
+.form-container {
+  padding: 35px;
+  margin-bottom: 35px;
+  background-color: #EFEFEF; }
+  .form-container form > div {
+    margin: 35px 0; }
+    .form-container form > div label input {
+      margin: 0 15px 0 15px; }
+  .form-container form .upload-area {
+    text-align: center;
+    margin: 35px 0;
+    margin-top: 0; }
+  .form-container form input#uploadinput {
+    width: 100%;
+    line-height: 42px;
+    text-align: center;
+    font-size: 20px; }
+  .form-container form .submit {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0; }
+    .form-container form .submit input {
+      background-color: #0C74E4;
+      color: #fff;
+      font-size: 13px;
+      padding: 15px;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 150px;
+      text-align: center; }
+      .form-container form .submit input:hover {
+        background-color: #105aaa; }
+  .form-container form span {
+    font-size: 13px; }
+
+.alert {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+  .alert .link a {
+    font-weight: bold; }
+  .alert .download {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%; }
+    .alert .download a {
+      background-color: #0C74E4;
+      color: #fff;
+      font-size: 13px;
+      padding: 15px;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 150px;
+      text-align: center;
+      background-color: #0C74E4; }
+      .alert .download a:hover {
+        background-color: #105aaa; }

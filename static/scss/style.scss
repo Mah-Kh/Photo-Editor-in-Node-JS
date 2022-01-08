@@ -1,0 +1,137 @@
+$primary-color: #EFEFEF;
+$secondary-color: #0C74E4;
+$download-color: #0C74E4;
+
+$white-color: #fff;
+$hover: #105aaa;
+$padding: 35px;
+$padding-tb: $padding 0;
+$padding-s: 15px;
+$padding-s-tb: $padding-s 0;
+$margin: 35px;
+$margin-tb: $margin 0;
+$margin-s: 15px;
+$margin-s-tb: $margin-s 0;
+$font-family: 'Roboto', sans-serif;
+$font-l: 20px;
+$font-m: 14px;
+$font-s: 13px;
+
+@mixin max-width {
+    max-width:1320px;
+    margin: 30px auto;
+}
+@mixin btn {
+    background-color: $secondary-color;
+    color: $white-color;
+    font-size: $font-s;
+    padding: $padding-s;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+}
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@mixin flex-center {
+    @include flex;
+    justify-content: center;
+}
+@mixin flex-start {
+    @include flex;
+    justify-content: flex-start;
+}
+@mixin flex-between {
+    @include flex;
+    justify-content: space-between;
+}
+@mixin background {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+body{
+    @include max-width;
+    font-family: $font-family;
+    font-weight: normal;
+}
+input{
+    font-family: $font-family;
+}
+h1 {
+    font-size: $font-l;
+}
+h2 {
+    font-size: $font-l;
+    text-align: center;
+}
+.form-container {
+    padding: $padding;
+    margin-bottom: $margin;
+    background-color: $primary-color;
+    form {
+        > div {
+            margin: $margin-tb;
+            label input {
+                margin: 0 $margin-s 0 $margin-s;
+            }
+        }
+        .upload-area {
+            text-align: center;
+            margin: $margin-tb;
+            margin-top: 0;
+        }
+        input#uploadinput {
+            width: 100%;
+            line-height: 42px;
+            text-align: center;
+            font-size: $font-l;
+        }
+        .submit {
+            @include flex-start;
+            margin: 0;
+            input {
+                @include btn;
+                &:hover{
+                    background-color: $hover;
+                }
+            }
+        }
+        span{
+            font-size: $font-s;
+        }      
+    }
+}
+.alert {
+    @include flex;
+    justify-content: center;
+    .link {
+        a {
+            font-weight: bold;
+        }
+    }
+    .download {
+        @include flex;
+        justify-content: center;
+        width: 100%;
+        a {
+            @include btn;
+            background-color: $download-color;
+            &:hover{
+                background-color: $hover;
+            }
+        }
+    }
+}
+
+
+
+
