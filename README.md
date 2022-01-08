@@ -1,4 +1,4 @@
-# Practice Node.js
+# Photo Editor in Node.js
 
 - The server was a ready Code from another person and I've used that server code for the server of this project and I have done all the other codes to create this project and to practice node.js, express, jade Template and shape library. Because of the server code, it's not legal to use the Code of this project for any other projects!
 
