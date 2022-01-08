@@ -1,0 +1,69 @@
+doctype html
+html(lang="en")
+	head
+	title=title
+	link(rel="stylesheet" type="text/css" href="/static/css/style.css")
+	link(href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet")
+	body
+	div.header
+		
+	div.form-container
+		//- h1 Photo Editor		
+		if(send)
+			div.alert
+				div.download
+					a(href=`${imgSrc}`, download) download
+				div.link
+					p You can see the edited image here &nbsp#[a(href=`${imgSrc}`, target='_blank') Link] 
+		form(action='/',method='get' name='uploadImg')
+			div.upload-area
+				input(id='uploadinput',type='text' ,placeholder='Enter the link of your image here' name='url')
+			div.format
+				p #[ Choose Format:] 
+				label PNG
+					input(type='radio' name='format' value='png' checked)
+				label JPG
+					input(type='radio' name='format' value='jpeg')
+				label TIFF
+					input(type='radio' name='format' value='tiff')
+				label WEBP
+					input(type='radio' name='format' value='webp')
+			div.resize
+				p #[ Resize image:]&nbsp #[span *&nbspChoose width or height in order to resize image proportionally ] 
+				label width
+					input(type='number' name='w' value='width')
+				label height
+					input(type='number' name='h' value='height')
+			div.crop
+				p #[ Crop image:]
+				label top
+					input(type='number' name='top' value='top')
+				label left
+					input(type='number' name='left' value='left')
+				label width
+					input(type='number' name='width' value='width')
+				label height
+					input(type='number' name='height' value='height')
+			div.color
+				p #[ Select the color effect from the menu:]  
+				select(name='selectcolor')
+					option() Select color manipulation
+					option(name='color' value='greyscale') greyscale
+					option(name='color' value='threshold') threshold
+					option(name='color' value='blur') blur
+				//option(value='toColorspace') toColorspace
+			div.rotation
+				label #[ Select rotate degree:] 
+				select(name='selectrotate')
+					option(name='rotate' value='0') 0
+					option(name='rotate' value='45') 45
+					option(name='rotate' value='90') 90
+					option(name='rotate' value='135') 135
+					option(name='rotate' value='180') 180
+					option(name='rotate' value='225') 225
+					option(name='rotate' value='270') 270
+					option(name='rotate' value='315') 315
+				label #[ &nbsp or insert rotate degree here:]  
+				input(type='number' name='rotation' value='')
+			div.submit
+				input(type='submit', value='submit') 
